@@ -1,0 +1,88 @@
+
+page-signup {
+    .container {
+        padding: 15pt;
+    }
+
+    .title_menu h1 {
+        font-size: 32px;
+        // font-family: initial;
+    }
+
+    .subtitle {
+        color: #DF0026;
+        margin: 0 auto;
+    }
+
+    ion-checkbox.remember_password {
+        margin-left: 5px !important;
+    }
+
+    .remember_password {
+        margin-left: 5px !important;
+
+    }
+
+    .signup-btn {
+      background-color: #312B7B !important;
+      padding: 15pt;
+      border-radius: 5px;
+      text-transform: none;
+    }
+
+    .forget_password {
+        margin-left: 60px !important;
+    }
+
+    .bottom_text {
+        margin-left: 93px;
+
+    }
+
+    form.ng-untouched.ng-pristine.ng-valid {
+        margin-top: 18px;
+    }
+
+    .item-input .label-md,
+    .item-select .label-md,
+    .item-datetime .label-md {
+        color: black;
+    }
+
+    .mailwidth {
+        background-image: image('../assets/icon/feather-lock.png');
+    }
+
+    .footer_image {
+        margin-top: 20px;
+    }
+
+  .emailicon {
+    width: 100%;
+    height: 38px;
+    border: none;
+    padding: 5px 15px 5px 5px;
+    font-size: 14px;
+    background-image: url(../assets/icon/feather-lock.png);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 98% 10px;
+  }
+
+  .passwordicon {
+    width: 100%;
+    height: 38px;
+    border: none;
+    padding: 5px 15px 5px 5px;
+    font-size: 14px;
+    background-image: url(../assets/icon/material-mail-outline1.png);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 98% 10px;
+  }
+
+  .error-message {
+    color: red;
+    margin-left: 15px;
+}
+}

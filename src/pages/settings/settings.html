@@ -1,0 +1,31 @@
+<header [isBackButtonEnable]='false' title='Settings' #headerPage></header>
+<ion-content style="margin-top: 45pt">
+  <div class="main_div">
+    <div class="text-grey heading" style="margin-top: 0px" padding-left>{{ 'MAIN_PREFERENCE' | translate }}</div>
+    <ion-item no-lines>
+      <div class="small-subheading-size">{{ 'LANGUAGE' | translate }}</div>
+      <select item-right [(ngModel)]="laguage" class="set-font-size" (change)="selectLanguage()">
+        <option value="en" selected>English</option>
+        <option value="ar">عرب</option>
+      </select>
+    </ion-item>
+    <div class="saparator"></div>
+
+    <div class="text-grey heading" padding-left>{{ 'APPEARANCE' | translate }}</div>
+    <ion-item no-lines>
+      <ion-label class="small-subheading-size">{{ 'NIGHT_MODE' | translate }}</ion-label>
+      <ion-toggle [(ngModel)]="isNightMode" (ionChange)="changeTheme($event)" [checked]=true></ion-toggle>
+    </ion-item>
+    <div class="saparator"></div>
+
+    <div class="text-grey heading" padding-left>{{ 'SOUND' | translate }}</div>
+    <ion-item no-lines>
+      <ion-label class="small-subheading-size">{{ 'NOTIFICATION_SOUND' | translate }}</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    <div class="saparator"></div>
+    <div class="text-grey heading" padding-left (click)="changeAddress()">{{ 'CHANGE_ADDRESS' | translate }}</div>
+    <div class="text-grey heading" padding-left (click)="changepassword()">{{ 'CHANGE_PASSWORD' | translate }}</div>
+    <div class="text-grey heading" padding-left (click)="deleteaccount()">{{ 'DELETE_ACCOUNT' | translate }}</div>
+  </div>
+</ion-content>

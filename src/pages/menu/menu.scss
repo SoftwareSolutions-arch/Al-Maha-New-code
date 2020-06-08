@@ -1,0 +1,79 @@
+page-menu {
+
+  img.heart_icons {
+    max-width: 41%;
+    /* text-align: center; */
+    /* position: absolute; */
+    margin: 20% 0% 4% 29%;
+  }
+
+  img.group_edit {
+    position: absolute;
+    top: 65px;
+    right: 88px;
+    max-width: 35px;
+  }
+
+  .text_title.title.title-md {
+    text-align: center;
+  }
+
+  img.new_text {
+    max-width: 20px;
+  }
+  .main-list-div.item.md{
+    background-color: #312B7B !important;
+  }
+
+  img.new_texts {
+    float: right;
+  }
+
+  ion-icon.icon.icon-md.item-icon.ion-ios-arrow-down {
+    float: right;
+  }
+
+  ion-icon.icon.icon-md.item-icon.ion-ios-arrow-up {
+    float: right;
+  }
+
+  ion-icon.icon.icon-md.ion-ios-arrow-down {
+    float: right;
+  }
+
+  .main-list-div .item.item-block {
+    background: #312B7B;
+  }
+  .main-list-div {
+    background: #312B7B !important;
+  }
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+    background-image: none !important;
+  }
+  .main-list-div ion-label {
+    color: #fff;
+  }
+  .main-list-div ion-label img {
+    margin-right: 15px;
+  }
+  .list-md .item-block .item-inner {
+    // border-bottom: none !;
+    border-bottom: 1px solid #a9a9a930 !important;
+  }
+
+  .mytext {
+    font-size: 1.2rem;
+    color: #f7efef63;
+  }
+  ul {
+    margin: 0;
+  }
+
+  .toolbar-ios ion-title{
+    position: relative !important;
+  }
+
+  .icon.icon-ios.ion-ios-arrow-down {
+    float: right;
+}
+}

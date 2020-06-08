@@ -1,0 +1,181 @@
+<header [isBackButtonEnable]='true' [title]="" #header></header>
+<ion-content style="margin-top: 40px">
+
+  <div>
+    <div class="row all-img-div">
+      <ion-col col-9><img class="big-img"  #myImage (click)="presentImage(myImage)" src="{{this.myProducts.image}}"></ion-col>
+      <ion-col col-3 style="right: 10pt">
+        <img *ngIf="this.productsimagesfirst" class="small-specs1" src="{{this.productsimagesfirst}}">
+        <img *ngIf="this.productsimagessecond" class="small-specs2" src="{{this.productsimagessecond}}">
+      </ion-col>
+    </div>
+    <div class="heading-text1 set-times-new-roman">{{myProducts.name}}</div>
+    <!-- <div class="heading-text2 set-times-new-roman">Glasses Frame Model CK5464-001</div> -->
+    <div class="row" text-center>
+      <ionic3-star-rating style="margin-left: 25pt;" #rating class="rating" activeIcon="md-star" defaultIcon="md-star"
+        activeColor="orange" defaultColor="#e0e0e0" readonly="true" [rating]="myProducts.rating">
+      </ionic3-star-rating>
+      <span style="margin-top: 4pt;margin-left: 5pt">0 {{ 'REVIEWS' | translate }}</span>
+      <div item-right class="discount-text-cart set-times-new-roman">-40%</div>
+    </div>
+    <div class="price-div"><span class="price">{{myProducts.special_formated}}</span><span
+        class="price-cut">{{myProducts.price_formated}}</span></div>
+
+    <div class="row text-grey" style="margin-left: 15pt">
+      <div style="padding-right: 90pt">
+        <div>{{ 'BRAND' | translate }} : {{myProducts.manufacturer}}</div>
+        <div>{{ 'PRODUCT_CODE' | translate }} : {{myProducts.model}}</div>
+        <div>{{ 'AVAILABLITY' | translate }} : {{myProducts.stock_status}}</div>
+        <div>{{ 'VIEWED' | translate }} : {{myProducts.viewed}}</div>
+      </div>
+      <div item-right class="row plus-minus-div">
+        <span><button (click)="decrementQty()" class="plus-minus" ion-fab>-</button></span><span
+          class="number">{{qty}}</span><span><button (click)="incrementQty()" class="plus-minus"
+            ion-fab>+</button></span>
+      </div>
+    </div>
+    <div padding (click)="addtoCart()">
+      <button class="add-to-cart" padding ion-button full>{{ 'ADD_TO_CART' | translate }}</button>
+    </div>
+
+    <ion-row text-center padding-bottom padding-left>
+      <ion-col col-2></ion-col>
+      <ion-col col-5>
+        <button class="text-transform-btn" ion-button icon-start clear small (click)="addToWishlist()">
+          <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="md-heart"></ion-icon>
+          <div class="text-grey">{{ 'ADD_TO_WISHLIST' | translate }}</div>
+        </button>
+      </ion-col>
+      <ion-col col-5>
+        <button class="text-transform-btn" ion-button icon-start clear small (click)="addToCompare()">
+          <ion-icon style="color:#dc0424" name="md-repeat"></ion-icon>
+          <div class="text-grey">{{ 'ADD_TO_COMPARE' | translate }}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <div margin>
+      <ion-segment [(ngModel)]="itemSelected">
+        <ion-segment-button value="Item Specifics">
+          {{ 'ITEM_SPECIFIES' | translate }}
+        </ion-segment-button>
+        <ion-segment-button value="Description">
+          {{ 'DESCRIPTION' | translate }}
+        </ion-segment-button>
+        <ion-segment-button value="Reviews">
+          {{ 'REVIEWS' | translate }}
+        </ion-segment-button>
+      </ion-segment>
+
+      <div [ngSwitch]="itemSelected">
+        <ion-list *ngSwitchCase="'Item Specifics'">
+          <ion-grid>
+            <ion-row padding style="font-size: 1rem;">
+              <ion-col>
+                <span *ngFor="let allItems of this.itemdeails">
+                  <!-- <div class="bottom-margin">{{allItems.name}} &ensp;&emsp;:&emsp;{{allItems.text}}</div> -->
+                  <div class="row">
+                    <div class="top-margin">{{allItems.name}}</div>
+                    <div class="dot-margin">:</div>
+                    <div class="bottom-margin">{{allItems.text}}</div>
+                  </div>
+                </span>
+                <span *ngFor="let allItems of this.attributedeails">
+                  <!-- <div class="bottom-margin">{{allItems.name}} &emsp;&ensp;&ensp;:&emsp;{{allItems.text}}</div> -->
+                <div class="row">
+                  <div class="top-margin">{{allItems.name}}</div>
+                  <div class="dot-margin">:</div>
+                  <div class="bottom-margin">{{allItems.text}}</div>
+                </div>
+                </span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Description'">
+          <p [innerHTML]="myProducts.description" style="margin-top: 15pt;font-size: 1rem;"><br></p>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Reviews'">
+          <div *ngIf="isitemReview">
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/img/Ellipse 20.png">
+              </ion-avatar>
+              <div style="font-size: 1.1rem" text-wrap>Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.</div>
+              <div>
+                <ionic3-star-rating #rating class="rating" activeIcon="md-star" defaultIcon="md-star"
+                  activeColor="orange" defaultColor="#e0e0e0" readonly="true" [rating]="4">
+                </ionic3-star-rating>
+              </div>
+            </ion-item>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/img/marty-avatar.png">
+              </ion-avatar>
+              <div style="font-size: 1.1rem" text-wrap>Lorem Ipsum is simply dummy text of the printing.</div>
+              <div>
+                <ionic3-star-rating #rating class="rating" activeIcon="md-star" defaultIcon="md-star"
+                  activeColor="orange" defaultColor="#e0e0e0" readonly="true" [rating]="4">
+                </ionic3-star-rating>
+              </div>
+            </ion-item>
+            <div text-right>
+              <button class="text-transform-btn" ion-button icon-start clear small>
+                <ion-icon style="color:#dc0424;font-size: 1.7rem;" name="ios-add-circle-outline"></ion-icon>
+                <div style="font-size: 8pt" class="text-grey">View More</div>
+              </button>
+            </div>
+          </div>
+          <div *ngIf="!isitemReview">
+            <div>
+              <div style="font-size: 8pt" class="reviewdetails">{{ 'NO_REVIEWS' | translate }}</div>
+            </div>
+          </div>
+        </ion-list>
+      </div>
+    </div>
+
+    <div margin-top (click)="next()">
+      <ion-item class="set-times-new-roman" ion-item no-lines icon-end>{{ 'RELATED_PRODUCTS' | translate }}
+        <ion-icon item-right name="md-arrow-forward"></ion-icon>
+      </ion-item>
+        <ion-slides *ngIf="this.allrelatedproducts && this.allrelatedproducts.length" autoplay="2000" slidesPerView="3"
+          spaceBetween="1" loop="true" speed="700">
+          <ion-slide style="margin: 0px 5px" *ngFor="let relatedproduct of this.allrelatedproducts" text-center
+            (click)="openProductDetailPage(relatedproduct)">
+            <ion-col col-4 text-right>
+              <div>
+                <div class="discount-text">-40%</div>
+                <div class="trending-now-item-div">
+                  <img class="trendingImages" src={{relatedproduct.thumb}}>
+                  <div class="trend-now-name text-grey">{{relatedproduct.name}}</div>
+                  <div>{{relatedproduct.price_formated}}</div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-slide>
+        </ion-slides>
+    </div>
+
+    <div class="footer-div">
+      <div class="get-question-text">{{ 'GET_QUESTIONS' | translate }}</div>
+      <ion-row text-center padding-bottom padding-left>
+        <ion-col col-6>
+          <button (click)="shareViaEmail()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="ios-mail-outline"></ion-icon>
+            <div class="white-text">info@almahaopt.com.sa</div>
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <button (click)="opendialpad()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424" name="md-headset"></ion-icon>
+            <div class="white-text">9200 333 90</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

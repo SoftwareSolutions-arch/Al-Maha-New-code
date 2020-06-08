@@ -1,0 +1,51 @@
+<header [isBackButtonEnable]='false' [title]='title' #headerPage></header>
+
+<ion-content style="margin-top: 50px;">
+  <ion-card class="image_dash">
+    <ion-card-content>
+      <div class="row">
+        <div class="col-md-8">
+          <span (click)="orderStatus()" class="arrow">
+            <p class="new_text">Calvin Klein Cat Eye Women's Medical Glasses</p>
+          </span>
+          <div class="dot_delivered"></div>
+          <p class="price_text">Delivered on Mar 13,2020</p>
+        </div>
+        <div>
+          <img class="Group_icon" src="assets/img/eye-glass.png">
+        </div>
+      </div>
+      <hr class="solid">
+    </ion-card-content>
+    <ion-card-content>
+      <div class="row">
+        <div class="col-md-8">
+          <span (click)="orderStatus()" class="arrow">
+            <p class="new_text">Calvin Klein Cat Eye Women's Medical Glasses</p>
+          </span>
+          <div class="dot"></div>
+          <p class="price_text">Cancelled</p>
+        </div>
+        <div>
+          <img class="Group_icon" src="assets/img/eye-glass.png">
+        </div>
+      </div>
+      <hr class="solid">
+    </ion-card-content>
+    <ion-card-content>
+      <div class="row">
+        <div class="col-md-8">
+          <span (click)="orderStatus()" class="arrow">
+            <p class="new_text">Calvin Klein Cat Eye Women's Medical Glasses</p>
+          </span>
+          <div class="dot_delivered"></div>
+          <p class="price_text">Delivered on Dec 18,2019</p>
+        </div>
+        <div>
+          <img class="Group_icon" src="assets/img/eye-glass.png">
+        </div>
+      </div>
+      <hr class="solid">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

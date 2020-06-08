@@ -1,0 +1,172 @@
+page-orderstatus {
+    img {
+        max-width: 8%;
+        border: 0;
+    }
+
+    img.Group_icon {
+        min-width: 100%;
+        width: 50pt;
+        height: 50pt;
+        -o-object-fit: contain;
+        object-fit: contain;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .image_dash {
+        box-shadow: none !important;
+    }
+
+    .col-md-8 {
+        width: 75%;
+    }
+
+    .col-md-4 {
+        width: 25%;
+    }
+
+    .scroll_image {
+        margin-top: 10%;
+    }
+
+    .card-content-md {
+        padding-left: 0px !important;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .image_dash.card {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+    }
+
+    .image_dash.card {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .price_text {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+
+    .icon.icon-md.ion-md-notifications-outline {
+        color: #312B7B;
+    }
+
+    .img.Group_icon {
+        min-width: 100px;
+        position: absolute;
+        right: 8px;
+    }
+
+    .price_text {
+
+        left: 20px;
+        position: relative;
+        top: -11px;
+    }
+
+    .submit_review {
+        margin-top: 10%;
+        font-weight: 500;
+    }
+
+    .abc {
+        display: inline-flex !important;
+    }
+
+    .sar_abc {
+        font-size: 2rem;
+    }
+
+    p.new_abc {
+        margin-left: 20px;
+        margin-top: 5px;
+        text-decoration: line-through !important;
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    .image_dashs.card {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .date_status {
+        font-size: 9px !important;
+    }
+
+    .vl {
+        position: relative;
+        content: '\25CF';
+        border-left: 2px solid green;
+        height: 90px;
+        margin-left: 8%;
+        width: 100% !important;
+    }
+
+    .card_inner {
+        position: absolute;
+        top: -17px;
+        left: 50px;
+    }
+
+    .dot {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: green;
+        border-radius: 50%;
+        left: 2%;
+        display: inline-block;
+    }
+
+    .dots {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: green;
+        border-radius: 50%;
+        left: 2%;
+        top: 83%;
+        display: inline-block;
+    }
+
+    .image_dashes {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .new_text {
+        font-size: 1rem !important;
+    }
+
+    p.card-subtitle {
+        color: #DF0026 !important;
+        position: absolute;
+        right: 0px;
+        top: 40px;
+    }
+
+    .submit_review {
+        // padding: 10px 10px;
+        font-weight: 500;
+    }
+    
+    .header-title {
+        margin-left: 30px !important;
+        font-size: 20px;
+    }
+
+    .order_id {
+        margin-left: 5%;
+    }
+}

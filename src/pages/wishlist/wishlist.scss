@@ -1,0 +1,44 @@
+page-wishlist {
+  .current-review-txt {
+    font-size: 1.9rem;
+    margin: 10px;
+    font-weight: 500;
+  }
+
+  .review-img {
+    width: 50pt;
+    height: 50pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .cart-item-img {
+    width: 50pt;
+    height: 50pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .order-now {
+    padding: 5px 10px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    margin-left: 12pt;
+  }
+
+  .saparator {
+    position: absolute;
+    left: 0;
+  }
+
+  .noprodcuts {
+    text-align: center;
+    margin-top: 50%;
+    font-size: 20px;
+  }
+}

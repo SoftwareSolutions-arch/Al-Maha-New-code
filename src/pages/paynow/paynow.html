@@ -1,0 +1,20 @@
+<header [isBackButtonEnable]='true' #headerPage></header>
+<ion-content padding>
+  <h2 class="new_text">{{ 'SELECT_PAYMENT_METHOD' | translate }}</h2>
+  <ion-list radio-group [(ngModel)]="selectpayment" >
+    <ion-item class="list_items">
+      <ion-label class="text-grey small-font">{{ 'CASH_ON_DELIVERY' | translate }}</ion-label>
+      <ion-radio type="radio" id="cashondelivery" name="payment" value="cashondelivery" style="float: left;"
+      (click)="selectPaymentmethod()" [checked]="isChecked" item-left></ion-radio>
+
+    </ion-item>
+    <ion-item class="list_items">
+      <ion-label class="text-grey small-font">{{ 'PAYFORT_FOR_VISA' | translate }}</ion-label>
+      <ion-radio type="radio" id="payfortvisa" name="payment" value="payfortvisa" style="float: left;"
+      (click)="selectPaymentmethod()" [checked]="isChecked" item-left></ion-radio>
+    </ion-item>
+  </ion-list>
+  <div class="pay_button">
+    <button (click)="setShippingMethod()" class="pay_button_inner" ion-button block>{{ 'PAY_NOW' | translate }}</button>
+  </div>
+</ion-content>

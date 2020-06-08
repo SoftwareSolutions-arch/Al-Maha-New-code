@@ -1,0 +1,74 @@
+<header [isBackButtonEnable]='true' [title]='title' #headerPage></header>
+
+<ion-content style="margin-top: 6vh;" padding>
+  <ion-card class="image_dashs">
+    <div class="submit_review">
+      <div class="row">
+        <div class="order_id">{{ 'ORDER_ID' | translate }} </div>
+        <div> - 121KJCS45454</div>
+      </div>
+
+    </div>
+    <ion-card-content>
+      <div class="row">
+        <div class="col-md-8">
+          <span class="arrow">
+            <p class="new_text">Calvin Klein Cat Eye Women's Medical Glasses</p>
+          </span>
+          <div class="abc">
+            <p class="sar_abc">SAR577.00</p>
+            <!-- <p class="new_abc">SAR1050.00</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img class="Group_icon" src="assets/img/Group 24.png">
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="image_dashs">
+    <div class="row">
+      <span class="dot"></span>
+      <div class="vl"></div>
+      <div class="card_inner">
+        <ion-card-content>
+          <div class="ordered_status">{{ 'ORDEREDANDAPPROVED' | translate }}</div>
+          <div class="date_status">Thu,5th Dec 2019</div>
+        </ion-card-content>
+        <ion-card-content>
+          <div class="ordered_status">{{ 'DELIVERED' | translate }}</div>
+          <div class="date_status">Sun,8th Dec 2019</div>
+        </ion-card-content>
+      </div>
+      <span class="dots"></span>
+
+    </div>
+  </ion-card>
+
+  <ion-card class="image_dashes">
+    <ion-card-content>
+      <p>{{ 'YOURREVIEW' | translate }}</p>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="Group_icon" src="assets/img/Group 24.png">
+        </div>
+        <div class="col-md-8" style="margin-top: 2%;">
+          <span class="arrow">
+            <p class="new_text">Lorem lpsum is simply dummy text of the printing and typesetting industry</p>
+          </span>
+
+          <div class="left_container">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <p (click)="editReview()" class="card-subtitle">{{ 'EDITREVIEW' | translate }}</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

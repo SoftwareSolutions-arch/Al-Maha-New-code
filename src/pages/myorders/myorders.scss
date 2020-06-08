@@ -1,0 +1,103 @@
+page-myorders {
+    img {
+        // max-width: 8%;
+        border: 0;
+    }
+
+    // img.Group_icon {
+    //     min-width: 120%;
+    //     min-height: 80px;
+    // }
+
+    .trash_icon {
+        color: red;
+        float: right;
+    }
+    .image_dash.card.card-md {
+        box-shadow: none !important;
+    }
+    .col-md-8 {
+        width: 75%;
+    }
+
+    .col-md-4 {
+        width: 25%;
+    }
+
+    .scroll_image {
+        margin-top: 10%;
+    }
+
+    .card-content-md {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .image_dash.card.card-md {
+        position: absolute;
+        right: 3px;
+        border: none;
+    }
+
+    .price_text {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        // color: #312B7B;
+    }
+
+    .new_text {
+        // color: #312B7B;
+        font-family: "Times New Roman";
+    }
+
+    .icon.icon-md.ion-md-notifications-outline {
+        color: #312B7B;
+    }
+
+    // .Group_icon {
+    //     min-width: 100px;
+    //     position: absolute;
+    //     right: 8px;
+    // }
+
+    .dot {
+        margin-top: 10px;
+        height: 10px;
+        width: 10px;
+        background-color: #f53d3d;
+        border-radius: 50%;
+    }
+
+    .dot_delivered {
+        margin-top: 10px;
+        height: 10px;
+        width: 10px;
+        background-color: #2ec95c;
+        border-radius: 50%;
+    }
+
+    .price_text {
+        left: 15px;
+        position: relative;
+        top: -13px;
+    }
+
+    .Group_icon {
+        width: 60pt;
+        height: 60pt;
+        object-fit: contain;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    ion-card.image_dash.card.card-ios {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    hr.solid {
+        border-top: 1px solid #bbb;
+      }
+}

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'EDIT_ADDRESS' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isgetForm">
+    <ion-list>
+      <ion-item [(ngModel)]="selectaddressid" radio-group *ngFor="let address of addressList" margin-top margin-bottom no-lines
+        text-wrap class="row sub-header-text">
+        <ion-label class="text-grey small-font">{{address.address_1}}</ion-label>
+        <ion-radio (click)="selectAddress()" value={{address.address_id}} item-left></ion-radio>
+      </ion-item>
+    </ion-list>
+    <div class="pay_button">
+      <button (click)="editAddressform()" class="pay_button_inner" ion-button block>{{ 'EDIT_ADDRESS' | translate }}</button>
+    </div>
+  </div>
+  <div *ngIf="isEditForm">
+    <ion-list>
+      <form [formGroup]="addressForm">
+        <ion-item>
+          <ion-label>{{ 'FIRST_NAME' | translate }}</ion-label>
+          <ion-input formControlName="firstname" type="text" value={{this.addressList.firstname}}></ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.firstname">
+            <div class="error-message"
+              *ngIf="addressForm.get('firstname').hasError(error.type) && (addressForm.get('firstname').dirty || addressForm.get('firstname').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label>{{ 'LAST_NAME' | translate }}</ion-label>
+          <ion-input formControlName="lastname" type="text" value={{this.addressList.lastname}}></ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.lastname">
+            <div class="error-message"
+              *ngIf="addressForm.get('lastname').hasError(error.type) && (addressForm.get('lastname').dirty || addressForm.get('lastname').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label>{{ 'CITY' | translate }}</ion-label>
+          <ion-input formControlName="city" type="text" value={{this.addressList.city}}></ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.city">
+            <div class="error-message"
+              *ngIf="addressForm.get('city').hasError(error.type) && (addressForm.get('city').dirty || addressForm.get('city').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label>{{ 'ADDRESS_LINE_1' | translate }}</ion-label>
+          <ion-textarea formControlName="address1" type="text" maxlength="80" value={{this.addressList.address_1}}>
+          </ion-textarea>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.address1">
+            <div class="error-message"
+              *ngIf="addressForm.get('address1').hasError(error.type) && (addressForm.get('address1').dirty || addressForm.get('address1').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label>{{ 'ADDRESS_LINE_2' | translate }}</ion-label>
+          <ion-textarea formControlName="address2" type="text" maxlength="80" value={{this.addressList.address_2}}>
+          </ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>{{ 'POSTAL_CODE' | translate }}</ion-label>
+          <ion-input formControlName="postalcode" type="number" clearInput value={{this.addressList.postcode}}>
+          </ion-input>
+        </ion-item>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.postalcode">
+            <div class="error-message"
+              *ngIf="addressForm.get('postalcode').hasError(error.type) && (addressForm.get('postalcode').dirty || addressForm.get('postalcode').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+      </form>
+      <button class="save_edit_address" ion-button  color="primary" (click)="saveAddress()">{{ 'SAVE' | translate }}</button>
+    </ion-list>
+  </div>
+</ion-content>

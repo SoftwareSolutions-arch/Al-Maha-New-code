@@ -1,0 +1,24 @@
+page-order-cancel-success {
+
+  .successfull-text{
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 20pt;
+    margin-top: 10pt;
+  }
+  .confirm-email{
+    font-size: 1.3rem;
+    margin-bottom: 10pt;
+  }
+  .middle-div{
+    background: #f4f4f4;
+    .middle1{padding: 12pt 60pt 12pt 12pt;font-size: 1.3rem}
+    .middle2{margin: 12pt;color: #dc0424;font-size: 1.3rem}
+  }
+  .continue-btn{
+    border-radius: 5px;
+    padding: 16pt;
+    font-weight: bold;
+    text-transform: none;
+  }
+}

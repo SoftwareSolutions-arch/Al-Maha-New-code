@@ -1,0 +1,113 @@
+<header [isBackButtonEnable]='false' [title]=""></header>
+
+<ion-content no-padding style="margin-top: 40px">
+  <div margin-top>
+    <ion-row style="padding-left: 10px">
+      <ion-col col-4 text-right>
+        <button (click)="openFilterBar()" class="filter-btn" ion-button small>
+          {{ 'APPLY_FILTERS' | translate }}
+        </button>
+      </ion-col>
+      <div class="filter_bar">
+        <ion-col>
+          <div class="set-font-size" style="margin-top: 10px;margin-left: 15px">{{ 'SORT_BY' | translate }} :</div>
+          <div class="option-div">
+            <select [(ngModel)]="sortbyvalue" class="set-font-size" (change)="sortProductascending(sortbyvalue)">
+              <option value="1" selected="selected">{{ 'DEFAULT' | translate }}</option>
+              <option value="2">{{ 'NAME_A_Z' | translate }}</option>
+              <option value="3">{{ 'NAME_Z_A' | translate }}</option>
+              <option value="4">{{ 'PRICE' | translate }} ({{ 'PRICE_LOW' | translate }} &gt; {{ 'PRICE_HIGH' | translate }})</option>
+              <option value="5">{{ 'PRICE' | translate }} ({{ 'PRICE_HIGH' | translate }} &gt; {{ 'PRICE_LOW' | translate }})</option>
+              <option value="6">{{ 'RATING_HIGHEST' | translate }}</option>
+              <option value="7">{{ 'RATING_Lowest' | translate }}</option>
+              <option value="8">{{ 'MODEL_A_Z' | translate }}</option>
+              <option value="9">{{ 'MODEL_Z_A' | translate }}</option>
+            </select>
+          </div>
+        </ion-col>
+        <ion-col class="product_filter">
+          <div style="margin-top: 10px" class="set-font-size">{{ 'SHOW' | translate }} :</div>
+          <div class="option-div">
+            <select [(ngModel)]="sortbylimits" class="set-font-size" (change)="productLimitvalue()">
+              <option value="15" selected>15</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="75">75</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </ion-col>
+      </div>
+    </ion-row>
+
+    <ion-row margin>
+      <ion-col *ngFor="let allItems of productList" style="margin-bottom: 18px;" col-6>
+        <ion-card class="set-card">
+          <ion-card-content (click)="openProductDetailPage(allItems)">
+            <div class="discount-text">-40%</div>
+            <img class="set-glass" src="{{allItems.image}}">
+            <div class="glass-detail-text">{{allItems.name}}</div>
+            <div class="price" text-center>{{allItems.price_formated}}</div>
+          </ion-card-content>
+        </ion-card>
+        <div class="set-cart">
+          <ion-icon class="set-cart-img" name="md-cart"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </ion-row>
+    <div *ngIf="footer_item">
+      <div class="footer-div">
+        <div class="get-question-text">{{ 'GET_QUESTIONS' | translate }}</div>
+        <ion-row text-center padding-bottom padding-left>
+          <ion-col col-6>
+            <button (click)="shareViaEmail()" class="text-transform-btn" ion-button icon-start clear small>
+              <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="ios-mail-outline"></ion-icon>
+              <div class="white-text">info@almahaopt.com.sa</div>
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button (click)="opendialpad()" class="text-transform-btn" ion-button icon-start clear small>
+              <ion-icon style="color:#dc0424" name="md-headset"></ion-icon>
+              <div class="white-text">9200 333 90</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="filterBar" class="row apply-filter-div">
+    <ion-col class="my_col" no-padding  col-6>
+      <div class="top-left-div">
+        <img style="width: 90%" src="{{this.categoryimage}}">
+        <div class="big-font set-times-new-roman">{{this.categoryname}}</div>
+        <div class="text-grey" style="padding-top: 7px;">Add Filters</div>
+      </div>
+
+      <div style="margin-top: 180px;margin-left: 15px;margin-bottom: 100pt"
+        *ngFor="let sideItems of this.sidemenuitems">
+        <div class="line-saparetor">{{sideItems.name}}</div>
+        <div style="margin-left: 30px">
+          <div (click)="getfilterItems(subitems)" style="margin-top: 10px" class="list-detail-div text-grey"
+            *ngFor="let subitems of sideItems.filter">
+            <span class="dot"></span>
+            <span class="detail-list">{{subitems.name}}</span>
+          </div>
+          <div text-right>
+            <button class="text-transform-btn" ion-button icon-start clear small>
+              <ion-icon style="color:#dc0424;font-size: 1.7rem;" name="ios-add-circle-outline"></ion-icon>
+              <div style="font-size: 8pt" class="text-grey">View More</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="apply-btn-div">
+        <button (click)="closeFilterBar()" class="text-transform-btn apply-btn" ion-button small> Apply</button>
+      </div>
+    </ion-col>
+    <ion-col (click)="closeFilterBar()" col-6 class="transparent-col"></ion-col>
+  </div>
+</ion-content>

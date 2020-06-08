@@ -1,0 +1,249 @@
+  page-product-list {
+
+    .filter-btn {
+      text-transform: none;
+      border-radius: 5px;
+    }
+
+    .set-font-size {
+      font-size: 8pt;
+    }
+
+    .option-div {
+      margin-top: 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid black;
+    }
+
+
+
+    .set-card {
+      border-radius: 20px;
+    }
+
+    .set-glass {
+      width: 85%;
+      margin-top: 30pt;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .glass-detail-text {
+      font-size: 0.8rem;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .discount-text {
+      margin-bottom: 15px;
+      font-size: 0.8rem;
+      color: white;
+      background: #dc0424;
+      float: right;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0px 5px;
+      line-height: 29px;
+      height: 30px;
+      margin-top: -10px;
+      margin-right: -10px;
+    }
+
+    .set-cart {
+      text-align: center;
+      margin-top: -25px;
+      position: relative;
+    }
+
+    .set-cart-img {
+      background-color: #312B7B;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .get-question-text {
+      color: white;
+      font-size: 18px;
+      padding: 20px;
+      padding: 20px 0px 20px 35px;
+    }
+
+    .white-text {
+      color: white;
+      margin-left: 5px;
+    }
+
+    .top-right-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: right;
+      color: white;
+      background: red;
+      width: auto;
+    }
+
+    .one {
+      color: black;
+      background: lightgrey;
+      padding: 4px 10px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-align: center;
+      margin: 0 3px;
+    }
+
+    .two {
+      color: white;
+      background: #312B7B;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0 3px;
+    }
+
+    .three {
+      color: black;
+      margin: 0 3px;
+      background: lightgrey;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .left-right-arrow {
+      color: #312B7B;
+      padding: 5px 10px;
+    }
+
+    .apply-filter-div {
+      position: absolute;
+      //height: 145%;
+      top: 0px;
+      width: 105%;
+    }
+
+    .left-col {
+      background: green;
+    }
+
+    .transparent-col {
+      background: #2f2e2e91;
+    }
+
+    .top-left-div {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      position: absolute;
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .big-font {
+      font-size: 13pt;
+      font-weight: bold;
+      margin-left: -10px;
+      margin-top: 15px;
+      margin-right: -10px;
+    }
+
+    .line-saparetor {
+      color: #585454;
+      height: 35pt;
+      padding-left: 18pt;
+      width: 100%;
+      background: #f1f1f1;
+      border-top: 1px solid #d0b6bf;
+      text-align: left;
+      line-height: 32pt;
+    }
+
+    .dot {
+      height: 7px;
+      width: 7px;
+      background-color: white;
+      border-radius: 50%;
+      border: 1px solid #a9a6a6;
+      display: inline-block;
+    }
+
+    .detail-list {
+      font-size: 0.9rem;
+      padding-left: 5pt;
+    }
+
+    .list-detail-div {
+      padding: 5px 0px;
+    }
+
+    .apply-btn-div {
+      margin-top: 30px;
+      text-align: center;
+
+      .apply-btn {
+        background: #2f964e;
+        padding: 0px 15px;
+      }
+    }
+
+    .footer-div {
+      background: #312B7B;
+      height: 160px;
+      z-index: auto !important;
+      position: relative;
+    }
+
+    a.page-link {
+      border: none !important;
+    }
+
+    .page-link {
+      color: black;
+      margin: 0 3px;
+      background: lightgrey;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-align: center;
+
+    }
+
+    .page-link:hover {
+      color: #0056b3;
+      text-decoration: none;
+      background-color: #312B7B;
+      /* border-color: #dee2e6; */
+    }
+
+    li.page-item.disabled {
+      margin-top: -6px;
+    }
+
+    .option-div {
+      display: inline-table;
+    }
+
+    .filter_bar {
+      display: inline-flex;
+    }
+
+    .product_filter {
+      position: absolute;
+      left: 74% !important;
+    }
+
+    .dark .col {
+      background: black;
+    }
+
+    .my_col.col {
+      background-color: white;
+    }
+  }

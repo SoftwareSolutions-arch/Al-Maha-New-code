@@ -1,0 +1,159 @@
+page-ordersummary {
+    img {
+        max-width: 8%;
+        border: 0;
+    }
+
+    img.Group_icon {
+        min-width: 92%;
+        margin-top: 3% !important;
+    }
+
+    .trash_icon {
+        color: red;
+        float: right;
+    }
+
+    .card.md {
+        border: none !important;
+    }
+
+    .image_dash.card {
+        box-shadow: none !important;
+    }
+
+    .image_dash.card {
+        border-bottom: 1px solid #a9a9a947 !important;
+    }
+
+    .col-md-8 {
+        width: 60%;
+    }
+
+    .col-md-4 {
+        width: 40%;
+    }
+
+    .scroll_image {
+        margin-top: 10%;
+    }
+
+    .card-content-md {
+        padding: 8px 8px 16px 3px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .image_dash.card {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .arrow {
+        display: inline-flex;
+        float: right !important;
+        color: #312B7B !important;
+        font-size: 1.8em;
+    }
+
+    .ion-ios-remove-circle {
+        position: absolute;
+        right: 45%;
+    }
+
+    .total_quantity {
+        font-size: 0.7em;
+        position: absolute;
+        right: 26%
+    }
+
+    .unit_quantity {
+        font-weight: bold;
+        font-size: 1.9rem !important;
+    }
+
+    table,
+    th,
+    td {
+        font-weight: 400;
+        font-weight: 400;
+        padding-top: 5%;
+    }
+
+    .span_quantity {
+        margin-left: 10%;
+    }
+
+    .total_amount {
+        font-weight: bold;
+        margin-left: 7%;
+        font-size: 2.3rem !important;
+        color: #DF0026;
+    }
+
+    .total_price {
+        font-size: 2.3rem !important;
+        float: right !important;
+        color: #DF0026;
+        font-weight: bold;
+        margin-left: 18% !important;
+    }
+
+    .pay_button_inner {
+        height: 5.6rem;
+        font-size: 2.0rem !important;
+        text-transform: none !important;
+        border-radius: 5px !important;
+        font-weight: bold;
+    }
+
+    .pay_button {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .Group_icon {
+        width: 70pt;
+        height: 70pt;
+        -o-object-fit: contain;
+        object-fit: contain;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    td.new_td {
+        position: absolute;
+        left: 50%;
+    }
+
+    .new_text {
+        margin: 0 0 2px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #222;
+    }
+
+    .plus-minus-div {
+        right: 25pt;
+        float: right;
+        position: absolute;
+
+        .number {
+            margin: 0pt 5pt;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: bold;
+        }
+
+        .plus-minus {
+            width: 25pt;
+            height: 25pt;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+}

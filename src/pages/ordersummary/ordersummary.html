@@ -1,0 +1,76 @@
+<header [isBackButtonEnable]='true' #headerPage></header>
+
+<ion-content class="scroll_image">
+  <div *ngFor="let listItems of this.mycartitems">
+    <ion-card style="margin-top: 10% !important;" class="image_dash">
+      <ion-card-content>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="Group_icon" src={{listItems.thumb}}>
+          </div>
+          <div class="col-md-8">
+              <span class="new_text">{{listItems.name}} </span>
+              <!-- <p class="new_text">{{listItems.model}} </p> -->
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="image_dash">
+      <ion-card-content>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="unit_quantity">{{ 'QUANTITY' | translate }}<span class="span_quantity">:<span style="margin-left: 10px;">{{listItems.quantity}}</span></span></div>
+          </div>
+          <div class="col-md-8">
+            <div item-right class="row plus-minus-div">
+              <span><button (click)="decrementQty(listItems)" class="plus-minus" ion-fab>-</button></span>
+              <span class="number">{{listItems.quantity}}</span>
+              <span><button (click)="incrementQty(listItems)" class="plus-minus" ion-fab>+</button></span>
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-card class="image_dash">
+    <ion-card-content>
+      <div class="unit_quantity">{{ 'ORDER_SUMMARY' | translate }}</div>
+      <table style="width:100%">
+        <tr>
+          <th>{{ 'ITEMS' | translate }}</th>
+          <td class="new_td">:</td>
+          <td>{{ 'SAR' | translate }} {{this.cartamount}}</td>
+        </tr>
+        <tr>
+          <th>Shipping and Handling</th>
+          <td class="new_td">:</td>
+          <td>{{ 'SAR' | translate }} 0</td>
+        </tr>
+        <tr>
+          <th>Total Before Tax</th>
+          <td class="new_td">:</td>
+          <td>{{ 'SAR' | translate }} {{this.cartamount}}</td>
+        </tr>
+        <tr>
+          <th>Total Tax</th>
+          <td class="new_td">:</td>
+          <td>{{ 'SAR' | translate }} 77.00</td>
+        </tr>
+        <tr>
+          <th>Points</th>
+          <td class="new_td">:</td>
+          <td> {{ 'SAR' | translate }} -77.00</td>
+        </tr>
+      </table>
+
+    </ion-card-content>
+  </ion-card>
+  <div class="row">
+    <div class="total_amount">{{ 'TOTAL_AMOUNT' | translate }}</div>
+    <div class="total_price">{{ 'SAR' | translate }}{{this.cartamount}}</div>
+  </div>
+  <div padding class="pay_button">
+    <button (click)="placeOrder()" class="pay_button_inner" ion-button block>{{ 'PLACE_YOUR_ORDER' | translate }}</button>
+  </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<header [isBackButtonEnable]='true' currentPage="CartItemsPage" [title]='title' #headerPage></header>
+
+<ion-content style="margin-top: 43pt">
+  <div *ngIf="!isCartListEmpty">
+    <div class="address-div">
+        <p class="my-New-text">
+          <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+          <span class="my_address" style="padding-left: 10px">{{ 'DELIVER_ADDRESS' | translate }}</span></p>
+    </div>
+    <ion-item margin-left no-lines *ngFor="let listItems of cartList">
+      <!-- <div *ngIf="listItems"> -->
+        <div item-start>
+          <img class="cart-item-img" src="{{listItems.thumb}}">
+        </div>
+        <div style="padding: 5px;margin-top: 10px">
+          <div style="font-size: 1.4rem;font-family: 'Times New Roman'" text-wrap>{{listItems.name}}</div>
+          <div style="font-size: 1.5rem;font-weight: 500;padding-top: 5px;font-family: 'Times New Roman'">{{listItems.price}}</div>
+          <ion-item>
+            <div item-right>
+              <span (click)="deleteOneItem(listItems)">
+            <ion-icon  style="color: #dc0424;font-size: 2.0rem" name="md-trash"></ion-icon>
+          </span>
+            <!-- <span (click)="buyNow(listItems)" class="order-now">Buy Now</span> -->
+          </div>
+        </ion-item>
+        <div class="saparator"></div>
+        </div>
+      <!-- </div> -->
+    </ion-item>
+    <div margin-top text-center><button (click)="buyNow()" ion-button class="order-now" small>{{ 'BUY_NOW' | translate }}</button></div>
+  </div>
+  <div class="noprodcuts" *ngIf="isCartListEmpty">
+    {{ 'NO_PRODCUTS' | translate }}.  </div>
+</ion-content>

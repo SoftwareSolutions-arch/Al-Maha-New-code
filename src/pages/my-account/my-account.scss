@@ -1,0 +1,57 @@
+page-my-account {
+  .profile-img {
+    height: 75pt;
+    width: 75pt;
+    border-radius: 50%;
+  }
+
+  .username {
+    font-size: 1.7rem;
+    font-weight: 500
+  }
+
+  .ionic3-star-rating[_ngcontent-c0] .button[_ngcontent-c0] {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .current-review-txt {
+    font-size: 1.9rem;
+    margin: 10px;
+    font-weight: 500;
+  }
+
+  .review-img {
+    width: 50pt;
+    height: 50pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .cart-item-img {
+    width: 50pt;
+    height: 50pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .order-now {
+    padding: 5px 10px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    margin-left: 100pt;
+  }
+
+  .mycart_items {
+    height: 70vh !important;
+  }
+
+  .listitem_details {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,114 @@
+header {
+  .toolbar-background {
+    background-color: #312B7B !important;
+  }
+
+  img {
+    max-width: 8%;
+    border: 0;
+  }
+
+  .set-header-icon {
+    //float: right;
+    //margin-left: 25px;
+    //max-width: 15px;
+    //margin-top: 5px;
+    float: right;
+    margin-left: 5px;
+    max-width: 25px;
+    margin-top: 5px;
+    margin-right: 8px;
+    padding: 5px;
+  }
+
+  .menu_icon {
+    max-width: 25px;
+
+  }
+
+  .toolbar-ios ion-title {
+    padding: 0px !important;
+  }
+
+  .toolbar-title-ios {
+    text-align: left !important;
+
+  }
+
+  div {
+    display: inline;
+  }
+
+  .back_button {
+    float: left;
+  }
+
+  .header-title {
+    // margin-left: 45px !important;
+    margin-left: 18px !important;
+    color: white;
+    //position: absolute;
+    //font-size: 14px;
+    line-height: 22pt;
+  }
+
+  .left-icon {
+    color: white;
+    padding: 5px 15px;
+    font-size: 15pt;
+  }
+
+  .toolbar-ios,
+  .toolbar-md {
+    min-height: 60px !important;
+  }
+
+  .topnav .search-container {
+    float: none;
+  }
+
+  .topnav a,
+  .topnav input[type=text],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+
+  .searchbar {
+    background-color: white;
+    margin-left: 20px;
+    width: 90%;
+    height: 33px;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  ion-list.searchItems {
+    width: 85%;
+    margin-left: 26px;
+    height: 32px;
+  }
+
+  .cartlength{
+    position: absolute;
+    right: 50px;
+    font-family: sans-serif;
+    border-radius: 100px;
+    height: 18px;
+    top: 11px;
+    width: 17px;
+    background: #ff7300;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+  }
+}

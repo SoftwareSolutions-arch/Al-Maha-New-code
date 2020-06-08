@@ -1,0 +1,70 @@
+<ion-content>
+  <div class="container">
+    <div class="title_menu">
+      <h1>Register Account!</h1>
+    </div>
+    <div class="subtitle">
+      Signup To Al Maha Opticals
+    </div>
+  </div>
+  <form [formGroup]="signupForm">
+    <ion-list>
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Email Address</ion-label>
+        <ion-input formControlName="email" class="text-grey" class="passwordicon" type="email"></ion-input>
+      </ion-item>
+
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="signupForm.get('email').hasError(error.type) && 
+           (signupForm.get('email').dirty || signupForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Password</ion-label>
+        <ion-input formControlName="password" class="text-grey emailicon" type="password" name="password"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.password">
+          <div class="error-message"
+            *ngIf="signupForm.get('password').hasError(error.type) && (signupForm.get('password').dirty || signupForm.get('password').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Confirm Password</ion-label>
+        <ion-input formControlName="confirmpassword" class="text-grey emailicon" type="password"
+          name="confirm_password"></ion-input>
+      </ion-item>
+
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.confirmpassword">
+          <div class="error-message"
+            *ngIf="signupForm.get('confirmpassword').hasError(error.type) && (signupForm.get('confirmpassword').dirty || signupForm.get('confirmpassword').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      <div class="error-message"
+        *ngIf="signupForm.get('confirmpassword').hasError('equalTo') && signupForm.get('confirmpassword').dirty || signupForm.get('confirmpassword').hasError('equalTo') && signupForm.get('confirmpassword').touched">
+        Password Mismatch
+      </div>
+
+      <div padding>
+        <button class="signup-btn" ion-button block (click)="signUp()" [disabled]="signupForm.invalid">Sign Up</button>
+      </div>
+    </ion-list>
+  </form>
+  <div class="row bottom_text">
+    <div class="text-grey" style="font-size: 1.3rem">Already Have An Account? <span (click)="doLogin()"
+        style="color:#DF0026;padding-left: 3px">Log in</span></div>
+  </div>
+  <div class="footer_image">
+    <img src="assets/img/Mask Group 1 2.png">
+  </div>
+</ion-content>

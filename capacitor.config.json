@@ -1,0 +1,20 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "AlMaha",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "android-minSdkVersion": "19",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "3000",
+      "GOOGLE_MAPS_ANDROID_API_KEY": "AIzaSyCANwWGF7aEZiZbtT0vV3v27gRx_ufIoHs"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<header [isBackButtonEnable]='true' #headerPage></header>
+
+<ion-content padding>
+  <h2 class="new_text">{{ 'DELIVERY_ADDRESS' | translate }}</h2>
+  <ion-list>
+    <ion-item [(ngModel)]="selectaddressid" radio-group *ngFor="let address of addressList" margin-top margin-bottom
+      no-lines text-wrap class="row sub-header-text">
+      <ion-label class="text-grey small-font">{{address.address_1}}</ion-label>
+      <ion-radio (click)="selectAddress()" value={{address.address_id}} item-left></ion-radio>
+      <button class="delete_button" ion-button style="padding-right: 15pt;" item-right (click)="deleteAddress(address)">
+        <ion-icon style="color: #dc0424;font-size: 2.0rem" name="md-trash"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+  <div class="pay_button">
+    <button (click)="confirmAddress()" class="pay_button_inner" ion-button
+      block>{{ 'THIS_ADDRESS' | translate }}</button>
+  </div>
+
+  <div class="edit_address">
+    <ion-label (click)="editAddress()">{{ 'EDIT_ADDRESS' | translate }}<ion-icon class="arrow_edit"
+        name="ios-arrow-forward"></ion-icon>
+    </ion-label>
+  </div>
+
+  <div class="add_new_address">
+    <ion-label (click)="addAddress()">{{ 'ADD_NEW_ADDRESS' | translate }}<ion-icon class="arrow_editNew"
+        name="ios-arrow-forward">
+      </ion-icon>
+    </ion-label>
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+page-contact {
+  .send {
+    background-color: #312B7B !important;
+    border-radius: 5px;
+    text-transform: none;
+    padding: 23px;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-top: 20pt;
+  }
+
+  .item-md.item-input.input-has-focus .item-inner {
+    border-top-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .list-ios>.item-block:first-child {
+    border-top: none;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 10px;
+  }
+}

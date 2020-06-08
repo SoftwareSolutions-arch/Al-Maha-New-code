@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "306959400514",
+    "firebase_url": "https://al-maha-9c4cf.firebaseio.com",
+    "project_id": "al-maha-9c4cf",
+    "storage_bucket": "al-maha-9c4cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306959400514:android:684bf27589aaa2ca0877db",
+        "android_client_info": {
+          "package_name": "com.alpha.almahaopt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306959400514-ri2nrnjkdhsjcniukucn09e51002s0ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClvIhFb0re4FJKrslz3cZo_ItNDRA_lPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306959400514-ri2nrnjkdhsjcniukucn09e51002s0ev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

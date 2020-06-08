@@ -1,0 +1,85 @@
+<header [isBackButtonEnable]='false'  title='Contact Us' #headerPage></header>
+<ion-content style="margin-top: 45pt;">
+<div style="margin-bottom: 40pt">
+  <div #map id="map" style="height:250px"></div>
+  <div>
+    <ion-item class="set-times-new-roman" no-lines style="font-size: 2.8rem;font-weight: 500;margin-top: 10px">Contact Form</ion-item>
+    <form [formGroup]="contactForm">
+    <ion-list style="padding: 18pt;padding-top: 0pt">
+
+      <ion-item no-padding>
+        <ion-label floating>Name</ion-label>
+        <ion-input formControlName="name" required type="text"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.name">
+          <div class="error-message"
+            *ngIf="contactForm.get('name').hasError(error.type) && (contactForm.get('name').dirty || contactForm.get('name').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="email" required type="email"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="contactForm.get('email').hasError(error.type) && 
+           (contactForm.get('email').dirty || contactForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label floating>Mobile No.</ion-label>
+        <ion-input formControlName="mobilenumber" required type="number"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.mobilenumber">
+          <div class="error-message"
+            *ngIf="contactForm.get('mobilenumber').hasError(error.type) && (contactForm.get('mobilenumber').dirty || contactForm.get('mobilenumber').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label floating>Message</ion-label>
+        <ion-input formControlName="message" required type="text"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.message">
+          <div class="error-message"
+            *ngIf="contactForm.get('message').hasError(error.type) && (contactForm.get('message').dirty || contactForm.get('message').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+
+      <button class="send" (click)="sendquery()" full ion-button>Send</button>
+    </ion-list>
+    </form>
+    <div class="footer-div" style="height: 150px">
+      <div class="get-question-text">Get Questions ? Contact Us 24/7</div>
+      <ion-row text-center padding-bottom padding-left>
+        <ion-col col-6>
+          <button (click)="shareViaEmail()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="ios-mail-outline"></ion-icon>
+            <div class="white-text">info@almahaopt.com.sa</div>
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <button (click)="opendialpad()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424" name="md-headset"></ion-icon>
+            <div class="white-text">9200 333 90</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</div>
+</ion-content>

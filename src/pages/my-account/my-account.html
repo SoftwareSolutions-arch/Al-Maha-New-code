@@ -1,0 +1,82 @@
+<header [isBackButtonEnable]='false' title="My Account"></header>
+<ion-content style="margin-top: 45pt">
+  <div>
+    <div margin-left margin-top margin-bottom padding class="row">
+      <img class="profile-img" src="assets/img/Ellipse 20.png">
+      <div padding-left class="col" style="margin-top: 5pt">
+        <div (click)="editProfile()"><span class="text-grey username">{{this.firstname}}&nbsp;{{this.lastname}}</span><a
+            style="padding-left: 10pt">
+            <ion-icon style="color: #dc0424" name="md-create"></ion-icon>
+          </a></div>
+        <div class="text-grey" style="font-size: 1.3rem;">{{this.telephone}}</div>
+        <div class="text-grey" style="font-size: 1.3rem;">4502 University Drive, LOUISVILLE</div>
+      </div>
+    </div>
+    <div style="background: #585858" class="saparator"></div>
+    <ion-item class="text-grey current-review-txt" no-lines>{{ 'CURRENT_REVIEWS' | translate }}</ion-item>
+
+    <ion-item margin-left no-lines>
+      <div item-start>
+        <img class="review-img" src="assets/img/eye-glass.png">
+      </div>
+      <div padding>
+        <div style="font-size: 1.1rem" text-wrap>Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.</div>
+        <ionic3-star-rating #rating class="rating" activeIcon="md-star" defaultIcon="md-star" activeColor="orange"
+          defaultColor="#e0e0e0" readonly="true" [rating]="4">
+        </ionic3-star-rating>
+      </div>
+    </ion-item>
+
+    <ion-item margin-left no-lines>
+      <div item-start>
+        <img class="review-img" src="assets/img/eye-glass.png">
+      </div>
+      <div padding>
+        <div style="font-size: 1.1rem" text-wrap>Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.</div>
+        <ionic3-star-rating #rating class="rating" activeIcon="md-star" defaultIcon="md-star" activeColor="orange"
+          defaultColor="#e0e0e0" readonly="true" [rating]="4">
+        </ionic3-star-rating>
+      </div>
+    </ion-item>
+
+    <ion-item margin-left no-lines>
+      <div item-start>
+        <img class="review-img" src="assets/img/eye-glass.png">
+      </div>
+      <div padding>
+        <div style="font-size: 1.1rem" text-wrap>Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.</div>
+        <ionic3-star-rating #rating class="rating" activeIcon="md-star" defaultIcon="md-star" activeColor="orange"
+          defaultColor="#e0e0e0" readonly="true" [rating]="4">
+        </ionic3-star-rating>
+      </div>
+    </ion-item>
+
+    <div style="background: #585858" class="saparator"></div>
+    <ion-item class="text-grey current-review-txt" no-lines>{{ 'ITEMS_IN_CART' | translate }}</ion-item>
+    <div class="mycart_items" *ngIf="!isCartListEmpty">
+      <ion-item *ngFor="let listItems of cartList" margin-left no-lines>
+        <div item-start>
+          <img class="cart-item-img" src="{{listItems.thumb}}">
+        </div>
+        <div class="listitem_details">
+          <div style="font-size: 1.5rem" text-wrap>{{listItems.name}}</div>
+          <div style="font-size: 1.6rem;font-weight: 500;padding-top: 5px">{{listItems.price}}</div>
+          <ion-item>
+            <div item-right><span>
+                <ion-icon style="color: #dc0424;font-size: 2.0rem" name="md-trash"></ion-icon>
+              </span>
+            </div>
+          </ion-item>
+        </div>
+      </ion-item>
+      <span class="order-now" (click)="buyNow()">{{ 'ORDER_NOW' | translate }}</span>
+
+    </div>
+    <div class="noprodcuts" *ngIf="isCartListEmpty">
+      {{ 'NO_PRODCUTS' | translate }}
+    </div>
+  </div>
+</ion-content>

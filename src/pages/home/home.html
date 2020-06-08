@@ -1,0 +1,95 @@
+<header [ngClass]="dark" [isBackButtonEnable]='false' [title]="" #headerPage></header>
+<ion-content [ngClass]="dark" no-padding>
+  <div>
+    <div class="header-top-div"></div>
+    <ion-slides class="set-minus-margin" (ionSlideDidChange)="topSlideChanged()" autoplay="1000" loop="true" speed="500"
+      pager>
+      <ion-slide *ngFor="let image of topImageContainer">
+        <img class="slider-image" src="{{ image.url }}">
+      </ion-slide>
+    </ion-slides>
+
+    <div>
+      <ion-card class="set-card">
+        <ion-card-content>
+          <ion-row>
+            <ion-col text-right>
+              <button class="active-category human-category" ion-button icon-start clear small>
+                {{ 'MEN_CATEGORY' | translate }}
+              </button>
+            </ion-col>
+            <ion-col text-center>
+              <button class="human-category" ion-button icon-start clear small>
+                {{ 'WOMEN_CATEGORY' | translate }}
+              </button>
+            </ion-col>
+            <ion-col align-self-center text-left>
+              <button class="human-category" ion-button icon-start clear small>
+                {{ 'KIDS_CATEGORY' | translate }}
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <ion-grid margin-top>
+            <ion-row>
+              <ion-col col-4 *ngFor="let categoryItems of categories" (click)="productListPage(categoryItems)">
+                <div text-center>
+                  <img class="glasses-img" src="{{categoryItems.image}}">
+                  <h3>{{categoryItems.name}}</h3>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-slides margin-top loop="true" pager>
+      <ion-slide margin-top *ngFor="let image of centerImageContainer">
+        <img style="height: 150px;width: 100%" src="{{ image.url }}">
+      </ion-slide>
+    </ion-slides>
+
+    <div margin-top (click)="next()">
+      <ion-item class="set-times-new-roman" ion-item no-lines icon-end>{{ 'TRENDING_NOW' | translate }}  
+        <ion-icon item-right name="md-arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-slides *ngIf="trendingItemList && trendingItemList.length" autoplay="2000" slidesPerView="3"
+                  spaceBetween="1" loop="true" speed="700">
+        <ion-slide *ngFor="let trendingItems of trendingItemList" text-center
+                   (click)="trendingListdetails(trendingItems)">
+          <ion-col col-4 text-right>
+            <div>
+              <div class="trending-now-item-div">
+                <div class="discount-text">-40%</div>
+                <img padding-top class="trendingImages" src="{{trendingItems.thumb}}">
+                <div class="trend-now-name text-grey">{{trendingItems.name}}</div>
+                <div class="price_formated">{{trendingItems.price_formated}}</div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+      <div class="footer-div">
+        <div class="get-question-text">{{ 'GET_QUESTIONS' | translate }}</div>
+        <ion-row text-center padding-bottom padding-left>
+          <ion-col col-6>
+            <button (click)="shareViaEmail()" class="text-transform-btn" ion-button icon-start clear small>
+              <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="ios-mail-outline"></ion-icon>
+              <div class="white-text">info@almahaopt.com.sa</div>
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button (click)="opendialpad()" class="text-transform-btn" ion-button icon-start clear small>
+              <ion-icon style="color:#dc0424" name="md-headset"></ion-icon>
+              <div class="white-text">9200 333 90</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+  </div>
+</ion-content>

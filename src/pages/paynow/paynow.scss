@@ -1,0 +1,61 @@
+page-paynow {
+    img {
+        max-width: 8%;
+        border: 0;
+    }
+
+    .search_icon{
+        float: right;
+        margin-left: 25px;
+        max-width: 15px;
+        margin-top: 5px;
+
+    }
+    .heart_icon{
+        float: right;
+        margin-left: 25px;
+        max-width: 15px;
+        margin-top: 5px;
+
+    }
+    .cart_icon{
+        float: right;
+        margin-left: 25px;
+        max-width: 15px;
+        margin-top: 5px;
+
+    }
+    .bell_icon{
+        float: right;
+        margin-left: 25px;
+        max-width: 15px;
+        margin-top: 5px;
+    }
+
+    .menu_icon{
+        max-width: 25px;
+    }
+
+    .pay_button_inner{
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 22pt;
+        border-radius: 5px !important;
+    }
+
+    .pay_button{
+        margin-top: 10%;
+    }
+    .item.item-block {
+        padding: 10px;
+    }
+    .new_text{
+        margin-top: 5.7rem !important;
+    }
+
+    label {
+        margin-left: 20px;
+        position: absolute;
+        top: 20px;
+    }
+}

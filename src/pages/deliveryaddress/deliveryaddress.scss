@@ -1,0 +1,50 @@
+page-deliveryaddress {
+    .pay_button_inner {
+        text-transform: none;
+        font-weight: bold;
+        text-transform: none;
+        font-size: 1.5rem;
+        border-radius: 5px !important;
+    }
+
+    .pay_button {
+        margin-top: 10%;
+    }
+
+    .new_text {
+        margin-top: 5.7rem !important;
+    }
+
+
+    .edit_address {
+        padding: 16px;
+        border-bottom: 1px solid #a9a9a930 !important;
+    }
+
+    .icon.icon-md.ion-ios-arrow-down {
+        margin-top: 14px;
+    }
+
+    .add_new_address {
+        margin-left: 14px;
+    }
+
+    .arrow_edit.icon {
+        float: right;
+    }
+
+    .arrow_editNew.icon {
+        float: right;
+        position: absolute;
+        right: 40px;
+    }
+
+    .sub-header-text {
+        font-size: 1.5rem;
+    }
+
+    .delete_button{
+        background: none;
+        box-shadow: none;
+    }
+}

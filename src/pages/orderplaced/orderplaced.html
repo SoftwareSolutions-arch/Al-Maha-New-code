@@ -1,0 +1,25 @@
+<header [isBackButtonEnable]='true'  #headerPage></header>
+
+<ion-content>
+
+  <h2 padding class="new_text">Thank You,Your Order Has Been Placed.</h2>
+  <p padding>An Email Confirmation Has Been Sent To You.</p>
+
+  <div class="container">
+    <p class="text_container">1 Item Will Be Delivered {{this.myaddress}}</p>
+    <h6 class="payment_container">Payment : COD</h6>
+    <h6 class="delivery_container">Estimated Delivery:15 Sep 2014-1 Oct 2014</h6>
+  </div>
+
+
+  <div class="edit_address">
+    <ion-label>Review Order<ion-icon class="arrow_edit" name="ios-arrow-forward"></ion-icon></ion-label>
+  </div>
+  <div class="add_new_address" (click)="cancelOrder()">
+    <ion-label>Cancel Order<ion-icon class="arrow_editNew"  name="ios-arrow-forward"></ion-icon></ion-label>
+  </div>
+
+  <div padding class="pay_button">
+    <button (click)="continue()" class="pay_button_inner" ion-button block>Continue Shopping</button>
+  </div>
+</ion-content>

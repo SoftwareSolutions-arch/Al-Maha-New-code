@@ -1,0 +1,64 @@
+<ion-content>
+  <div class="container">
+    <div class="title_menu">
+      <h1>Welcome Back!</h1>
+    </div>
+    <div class="subtitle">
+      Login To AI Maha Opticals
+    </div>
+  </div>
+
+  <form [formGroup]="loginForm">
+    <ion-list>
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Email Address</ion-label>
+        <ion-input formControlName="email" class="text-grey" class="passwordicon" type="email" value={{this.myemail}}>
+        </ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) &&
+         (loginForm.get('email').dirty || loginForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label class="text-grey" style="font-size: 1.2rem" floating>Password</ion-label>
+        <ion-input formControlName="password" class="text-grey emailicon" type="password" name="password"
+          value={{this.mypassword}}></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.password">
+          <div class="error-message"
+            *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="row" padding>
+        <ion-item col-7 no-lines>
+          <ion-label class="text-grey small-font">Remember Me</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" [checked]="isChecked" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+        <div text-right col-5 class="text-grey small-font forget-password" (click)="forgetpassword()">Forget Password
+        </div>
+      </div>
+
+      <div style="padding-left: 16px;padding-right: 16px;">
+        <!-- <button class="login-btn" ion-button full (click)="doLogin()" [disabled]="loginForm.invalid">Log in</button> -->
+        <button class="login-btn" ion-button full (click)="doLogin()">Log in</button>
+
+      </div>
+    </ion-list>
+  </form>
+  <div class="row bottom_text">
+    <div class="text-grey" style="font-size: 1.3rem">Don't Have An Account? <span (click)="signUp()"
+        style="color:#DF0026;padding-left: 3px">Signup</span></div>
+  </div>
+  <div class="footer_image">
+    <img src="assets/img/Mask Group 1.png">
+  </div>
+</ion-content>

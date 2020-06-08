@@ -1,0 +1,20 @@
+<header [isBackButtonEnable]='true' [title]='title' #headerPage></header>
+
+<ion-content style="margin-top: 41pt">
+  <ion-item margin-top margin-left no-lines *ngFor="let wishlistitem of this.allwishlishproducts">
+    <div item-start>
+      <img class="review-img" src={{wishlistitem.thumb}}>
+    </div>
+    <div padding-left>
+      <div style="font-size: 1.4rem;font-family: 'Times New Roman'" text-wrap>{{wishlistitem.name}}</div>
+      <div style="font-size: 1.5rem;font-weight: 500;padding-top: 5px;font-family: 'Times New Roman'">{{wishlistitem.price}}</div>
+    </div>
+    <a (click)="deleteWishlist(wishlistitem)" style="margin-top: 45pt;padding-right: 15pt;" item-right>
+      <ion-icon style="color: #dc0424;font-size: 2.0rem" name="md-trash"></ion-icon></a>
+    <div class="saparator"></div>
+  </ion-item>
+  <div class="noprodcuts" *ngIf="this.wishlishlength == 0">
+    {{ 'Wishlist_IS_EMPTY' | translate }}.
+  </div>
+</ion-content>
+

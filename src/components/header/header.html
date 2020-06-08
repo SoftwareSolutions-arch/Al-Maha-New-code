@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-navbar transparent style="padding: 3pt" color="favorite">
+    <div>
+      <ion-icon (click)="toggleMenu()" class="left-icon" *ngIf="!isBackButtonEnable" name="menu"></ion-icon>
+    </div>
+    <!--    <div><ion-icon  class="left-icon" *ngIf="isBackButtonEable"  name="md-arrow-back"></ion-icon></div>-->
+    <div text-center class="header-title">{{this.title}}</div>
+    <img (click)="openNotificationPage()" class="set-header-icon" src="assets/icon/Icon awesome-bell.png">
+    <span (click)="openCartItemsPage()">
+      <img  class="set-header-icon" src="assets/icon/Icon ionic-md-cart.png">
+      <span class="cartlength">{{this.myitemLength}}</span>
+    </span>
+      <img (click)="openWishList()" class="set-header-icon" src="assets/icon/Icon ionic-ios-heart.png">
+    <img class="set-header-icon" src="assets/icon/Icon ionic-ios-search.png" (click)="searchbox()">
+    <div *ngIf="inputbox">
+      <ion-searchbar class="searchbar" (ionInput)="getItems($event)"></ion-searchbar>
+    </div>
+  </ion-navbar>
+  <div *ngIf="inputbox" style="height: 100px;">
+    <ion-scroll style="width:100%;height:50vh" scrollY="true">
+      <ion-list class="searchItems" *ngFor="let allItems of this.searchproduct">
+        <ion-item scroll=true class="scroller" no-bounce (click)="searchItemdetails(allItems)"
+          style="border-radius: 20px;">{{allItems.name}}</ion-item>
+      </ion-list>
+    </ion-scroll>
+  </div>
+</ion-header>
+<ion-content>
+</ion-content>

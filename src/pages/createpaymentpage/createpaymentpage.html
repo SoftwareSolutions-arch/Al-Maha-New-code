@@ -1,0 +1,82 @@
+<ion-content padding>
+  <section class="wrapper">
+    <div class="container">
+      <span class="input">
+        <input class="input-field " type="tel" maxlength="19" id="cardNoInput" name="card_number" ondrag="return false"
+          ondrop="return false" pattern="[0-9*]*" autocomplete="off" value="">
+        <label class="input-label" for="">
+          <i class=" icon-credit-card icon "></i>
+          <i id="visaIndicator" class="icon-cc-visa visa" style="opacity: 0;"></i>
+          <i id="mcIndicator" class="icon-cc-mastercard mastercard" style="opacity: 0;"></i>
+          <i id="amexIndicator" class="icon-cc-amex amex" style="opacity: 0;"></i>
+          <i id="madaIndicator" class="icon-cc-mada mada" style="opacity: 0;"></i>
+          <i id="meezaIndicator" class="icon-cc-nps nps" style="opacity: 0;"></i>
+          <span class="input-label-content">
+            Card Number
+          </span>
+        </label>
+      </span> 
+      <span class="popover wrong-cn" id="cardNumErrHintSpan" style="display: none;"> 
+        <span class="content" id="cardNumErrContent">
+          Required field; cannot be left empty
+        </span>
+      </span>
+
+      <div class="half-containter">
+        <span class="input half1">
+          <input class="input-field" type="tel" placeholder="" pattern="[0-9/]*" id="expDateInput" name="expiry_date"
+            ondrag="return false" ondrop="return false" autocomplete="off" maxlength="5" value="">
+          <label class="input-label" for="">
+            <i class=" icon-calendar-empty icon"></i>
+            <span class="input-label-content"> MM/YY
+            </span>
+          </label>
+        </span> 
+        <span class="popover wrong-exc" id="expDateErrHintSpan" style="display: none;"> <span class="content"
+            id="expDateContentErr"> Required field; cannot be left empty
+          </span>
+        </span>
+      </div>
+      <div class="half-containter">
+        <span class="input visible half2" id="cvvSpan"> <input class="input-field" type="tel" pattern="[0-9]*"
+            maxlength="3" autocomplete="off" id="cvvInput" name="card_security_code">
+          <label class="input-label" for="">
+            <i class=" icon-lock icon ">
+            </i> 
+            <span class="input-label-content"> CVV
+            </span> 
+            <i class="icon-attention-circled icon-right icon">
+            </i> 
+            <i class="tooltip"
+              data-tooltip="Your Credit Card Security Number"> 
+            </i>
+          </label>
+        </span> 
+        <span class="popover empty-fields" id="allEmptyErrHintSpan">
+          <span class="content" id="cvvErrContent"> 
+            Required field; cannot be left empty
+          </span>
+        </span>
+      </div>
+
+      <div class="half-containter">
+        <span class="input" id="cardHNameSpan"> <input class="input-field name" type="text" maxlength="50"
+            id="chNameInput" name="customer_name" value=""> 
+            <label class="input-label " for=""> <i
+              class=" icon-user icon "></i>
+            <span class="input-label-content" id="showServices"> Cardholder Name
+            </span>
+          </label>
+        </span> 
+        <span class="popover empty-fields" id="cardHolderErrHintSpan">
+          <span class="content" id="cardHolderErrContent"> Required field; cannot be left empty
+          </span>
+        </span>
+      </div>
+      <button id="submitBtn" class="pay br" data-text="Pay" type="submit">
+        <i class="animated icon-spin5 animate-spin" style="display: none" id="loadingI"></i> 
+        <span id="btnHint">Pay</span>
+      </button>
+    </div>
+  </section>
+</ion-content>

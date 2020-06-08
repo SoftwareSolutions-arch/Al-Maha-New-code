@@ -1,0 +1,68 @@
+page-orderplaced {
+    .pay_button_inner{
+        height: 5.6rem;
+      font-weight: bold;
+        border-radius: 5px !important;
+    }
+
+    .pay_button{
+        margin-top: 10%;
+    }
+    .item.item-block.item-md.item-radio {
+        padding: 10px;
+    }
+    .new_text{
+        margin-top: 5.7rem !important;
+    }
+
+    .button-md {
+        text-transform: none !important;
+        font-size: 20px !important;
+    }
+    .edit_address {
+        padding: 16px;
+        border-bottom: 1px solid #a9a9a930 !important;
+    }
+
+    .icon.icon-md.ion-ios-arrow-down {
+        margin-top: 14px;
+    }
+    .add_new_address {
+        margin-left: 14px;
+    }
+
+    .arrow_edit.icon {
+        float: right;
+    }
+
+    .arrow_editNew.icon {
+        float: right;
+        position: absolute;
+        right: 25px;
+    }
+
+    .container {
+        background-color: #e6e6e6;
+        line-height: 2.0;  
+        padding: 20px;
+        // padding-right: 20%;
+    }
+
+    .text_container{
+        padding-right: 20% !important;
+        padding-left: 10% !important;
+    }
+
+    .payment_container{
+        padding-right: 20% !important;
+        padding-left: 10% !important;
+        color: #312B7B;
+    }
+
+    .delivery_container{
+        // padding-right: 20% !important;
+        padding-left: 10% !important;
+        color: #2f964e;
+        font-size: 95%;
+    }
+}

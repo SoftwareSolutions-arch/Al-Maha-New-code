@@ -1,0 +1,137 @@
+page-home {
+  .header-top-div {
+    height: 140px;
+    background-color: #312B7B;
+    z-index: -1;
+  }
+
+  .set-minus-margin {
+    margin-top: -48px;
+  }
+
+  .slider-image {
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 90%;
+  }
+
+  .set-card {
+    width: 90%;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+
+  .active-category {
+    border: 1px solid #dc0424 !important;
+  }
+
+  .human-category {
+    text-align: center;
+    text-transform: none;
+    border: 1px solid #312B7B;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-family: "Times New Roman";
+  }
+
+  .glasses-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 3px;
+  }
+
+  .trending-now-item-div {
+    background-color: #efefefc9;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+  }
+
+  .trend-now-name {
+    font-size: 5pt;
+    padding: 8px 7px;
+  }
+
+  .get-question-text {
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    padding: 20px 0px 20px 35px;
+    font-family: "Times New Roman";
+  }
+
+  .white-text {
+    color: white;
+    margin-left: 5px;
+  }
+
+  .text-transform-btn {
+    text-transform: none;
+  }
+
+  .top-right-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: right;
+    color: white;
+    background: red;
+    width: auto;
+  }
+
+  .discount-text {
+    font-size: 1rem;
+    color: white;
+    background: #dc0424;
+    float: right;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0px 5px;
+    line-height: 23pt;
+    height: 23pt;
+    margin-top: -10px;
+    margin-right: -10px;
+    margin-bottom: -20px;
+    position: relative;
+  }
+
+  .item-inner {
+    background-image: none !important;
+  }
+
+
+  .tam-title {
+    margin-top: -0.5%;
+    font-size: 80%;
+    font-weight: bold;
+    color: #ff9900;
+  }
+
+  button.text-transform-btn {
+    background: none;
+  }
+
+  .trendingImages {
+    background: white;
+    height: 130px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .price_formated {
+    font-weight: bold;
+    font-size: 14px !important;
+  }
+
+  .footer-div {
+    height: 130px;
+  }
+
+  input.searchbar-input {
+    box-shadow: none !important;
+  }
+}

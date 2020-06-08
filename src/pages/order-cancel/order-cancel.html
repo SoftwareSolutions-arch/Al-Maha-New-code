@@ -1,0 +1,34 @@
+<header [isBackButtonEnable]='true'  title='' #headerPage></header>
+
+<ion-content style="margin-top: 45pt">
+<div class="cancel-your-order">Cancel Your Order</div>
+  <ion-item no-lines>
+    <div item-right>
+      <img class="cart-item-img" src="assets/img/eye-glass.png">
+    </div>
+    <div style="padding: 5px">
+      <div class="frame-text1 text-grey" text-wrap>Calvin Klein Cat Eye Women's Medical</div>
+      <div class="frame-text2 text-grey" text-wrap>Glass Frame Model CK5464-001</div>
+      <div style="font-size: 1.6rem;font-weight: 500;padding-top: 5px"><span>SAR577.00</span> <span class="price-cut">SAR1050.00</span></div>
+    </div>
+  </ion-item>
+  <div>
+    <div class="fill-text text-grey">Fill The Details</div>
+    <div class="select-main-div">
+    <div class="select text-grey">
+      <select>
+        <option>Second Reason</option>
+        <option>Reason1</option>
+        <option>Reason2</option>
+      </select>
+<!--      <ion-icon class="select__arrow" name="ios-arrow-down"></ion-icon>-->
+    </div>
+    </div>
+    <div class="bottom_textarea">
+      <ion-textarea rows='7' placeholder="Suggestion" class="inner_textarea"></ion-textarea>
+    </div>
+  </div>
+  <div padding>
+    <button (click)="cancelOrder()" class="cancel-order-btn" ion-button full>Cancel Order</button>
+  </div>
+</ion-content>

@@ -1,0 +1,57 @@
+<header [isBackButtonEnable]='false' title='' #headerPage></header>
+
+<ion-content style="margin-top: 45pt">
+  <div>
+    <div class="feature-text set-times-new-roman" text-center>Featured Brands</div>
+    <div padding-left padding-right margin-left margin-right>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="left-col"><img class="brands-img" src="assets/img/gucci.png"></ion-col>
+          <ion-col class="right-col"><img class="brands-img" src="assets/img/benz.png"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="left-col"><img class="brands-img" src="assets/img/prada.png"></ion-col>
+          <ion-col class="right-col"><img class="brands-img" src="assets/img/boss.png"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="left-col"><img class="brands-img" src="assets/img/oxydo.png"></ion-col>
+          <ion-col class="right-col"><img class="brands-img" src="assets/img/rayban.png"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="left-col"><img class="brands-img" src="assets/img/gucci.png"></ion-col>
+          <ion-col class="right-col"><img class="brands-img" src="assets/img/benz.png"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="left-col"><img class="brands-img" src="assets/img/prada.png"></ion-col>
+          <ion-col class="right-col"><img class="brands-img" src="assets/img/boss.png"></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div padding class="row" margin style="margin-left: 27%;">
+      <ion-icon class="left-right-arrow" name="md-arrow-back"></ion-icon>
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <ion-icon class="left-right-arrow" name="md-arrow-forward"></ion-icon>
+    </div>
+
+    <div class="footer-div">
+      <div class="get-question-text">Get Questions ? Contact Us 24/7</div>
+      <ion-row text-center padding-bottom padding-left>
+        <ion-col col-6>
+          <button (click)="shareViaEmail()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424;font-size: 2.2rem;" name="ios-mail-outline"></ion-icon>
+            <div class="white-text">info@almahaopt.com.sa</div>
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <button (click)="opendialpad()" class="text-transform-btn" ion-button icon-start clear small>
+            <ion-icon style="color:#dc0424" name="md-headset"></ion-icon>
+            <div class="white-text">9200 333 90</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,138 @@
+page-login {
+    .container {
+        padding: 15pt;
+    }
+
+    .title_menu h1 {
+        font-size: 32px;
+        // font-family: initial;
+    }
+
+    .subtitle {
+        color: #DF0026;
+        margin: 0 auto;
+    }
+
+    ion-checkbox.remember_password {
+        margin-left: 5px !important;
+    }
+
+    // .remember_password {
+    //     // color: yellow !important;
+    //     margin-left: 5px !important;
+
+    // }
+
+    .login-btn {
+        background-color: #312B7B !important;
+        padding: 15pt;
+        border-radius: 5px;
+      text-transform: none;
+    }
+
+
+
+    .bottom_text {
+        margin-left: 93px;
+
+    }
+
+    form.ng-untouched.ng-pristine.ng-valid {
+        margin-top: 18px;
+    }
+
+    .item-input .label-md,
+    .item-select .label-md,
+    .item-datetime .label-md {
+        color: black;
+    }
+
+    .mailwidth {
+        // src: url(../../assets/icon/feather-lock.png) !important;
+        background-image: image('../assets/icon/feather-lock.png');
+        // background-repeat: no-repeat;
+
+    }
+
+    .footer_image {
+        margin-top: 20px;
+    }
+
+    .emailicon {
+        width: 100%;
+        height: 38px;
+        border: none;
+        padding: 5px 15px 5px 5px;
+        font-size: 14px;
+        background-image: url(../assets/icon/feather-lock.png);
+        background-size: 17px;
+        background-repeat: no-repeat;
+        background-position: 98% 10px;
+    }
+
+    .passwordicon {
+        width: 100%;
+        height: 38px;
+        border: none;
+        padding: 5px 15px 5px 5px;
+        font-size: 14px;
+        background-image: url(../assets/icon/material-mail-outline1.png);
+        background-size: 17px;
+        background-repeat: no-repeat;
+        background-position: 98% 10px;
+    }
+
+
+    .row.remenber_box {
+        padding: 16px 0px 16px 16px !important;
+    }
+
+    .remember_password {
+        margin-left: 5px !important;
+        float: left;
+      font-size: 1.2rem;
+        width: 54%;
+    }
+
+    .forget_password {
+            /* margin-left: 60px !important; */
+            float: right;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 290px;
+            right: 8px;
+            font-size: 15px;
+            font: 14px Quicksand;
+    }
+
+    .item.item-block.item-md.item-input {
+        padding-right: 16px !important;
+    }
+
+    .error-message {
+        color: red;
+        margin-left: 15px;
+        font-size: 12px;
+    }
+    
+        .forget_password {
+        float: right;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 320px;
+        right: 8px;
+        font-size: 15px;
+        font: 14px Quicksand;
+    }
+
+    ion-label.text-grey.small-font.label.label-md.p {
+        position: absolute;
+        top: 48%;
+        right: 11px;
+    }
+
+    .forget-password{
+        margin-top: 10px;
+        padding-right: 20px;
+      }
+}

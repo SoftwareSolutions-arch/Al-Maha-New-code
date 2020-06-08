@@ -1,0 +1,61 @@
+page-cart-items {
+
+  .my-New-text {
+    margin: 0 10px 0px;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #222;
+  }
+
+  .address-div {
+    background: #e0e0e0;
+    padding: 8pt;
+  }
+
+  .current-review-txt {
+    font-size: 1.9rem;
+    margin: 10px;
+    font-weight: 500;
+  }
+
+  .review-img {
+    width: 50pt;
+    height: 50pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .cart-item-img {
+    width: 70pt;
+    height: 70pt;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .order-now {
+    padding: 8px 40px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .saparator {
+    position: absolute;
+    left: 0px !important;
+  }
+
+  .noprodcuts {
+    text-align: center;
+    margin-top: 50%;
+    font-size: 20px;
+  }
+
+  .buynow {
+    margin-top: 5%;
+  }
+}

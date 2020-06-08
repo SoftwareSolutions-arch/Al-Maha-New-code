@@ -1,0 +1,51 @@
+page-brand {
+.feature-text{
+  font-size: 22pt;
+  font-weight: bold;
+  margin: 30pt;
+}
+  .brands-img{
+    height: 100pt;
+    padding: 20px;
+  }
+  .left-col{
+    border: 1px solid gray;
+    border-left: none;
+  }
+  .right-col{
+    border: 1px solid gray;
+    border-right: none;
+  }
+  .left-right-arrow{
+    color: #312B7B;
+    padding: 5px 10px;
+  }
+  .one{
+    color: black;
+    background: lightgrey;
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 3px;
+  }
+  .two{
+    color: white;
+    background: #312B7B;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 3px;
+  }
+  .three{
+    color: black;
+    margin: 0 3px;
+    background: lightgrey;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+}

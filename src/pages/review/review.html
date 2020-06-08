@@ -1,0 +1,70 @@
+<header [isBackButtonEnable]='true' #headerPage></header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-content>
+  <ion-card class="image_dash">
+    <h1 class="submit_review">{{ 'SUBMITREVIEW' | translate }}</h1>
+    <ion-card-content>
+      <div class="row">
+        <div class="col-md-8">
+          <span class="arrow">
+            <p class="new_text">Calvin Klein Cat Eye Women's Medical Glasses Frame Model CK5464-001</p>
+          </span>
+          <div class="abc">
+            <p class="sar_abc">SAR577.00</p>
+            <p class="new_abc">SAR1050.00</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img class="Group_icon" src="assets/img/Group 24.png">
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="container">
+    <div class="row">
+      <div class="left_container">
+        <p>{{ 'PRODOCT_QUALITY' | translate }}</p>
+
+        <div class="left_stars">
+          <form action="">
+            <input class="star star-5" id="star-5" type="radio" name="star" />
+            <label class="star star-5" for="star-5"></label>
+            <input class="star star-4" id="star-4" type="radio" name="star" />
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-3" id="star-3" type="radio" name="star" />
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-2" id="star-2" type="radio" name="star" />
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-1" id="star-1" type="radio" name="star" />
+            <label class="star star-1" for="star-1"></label>
+          </form>
+        </div>
+      </div>
+
+      <div class="right_container">
+        <p>{{ 'DELIVERY_SERVICE' | translate }}</p>
+        <div class="right_stars">
+          <form action="">
+            <input class="star star-5" id="stars-5" type="radio" name="stars" />
+            <label class="star star-5" for="stars-5"></label>
+            <input class="star star-4" id="stars-4" type="radio" name="stars" />
+            <label class="star star-4" for="stars-4"></label>
+            <input class="star star-3" id="stars-3" type="radio" name="stars" />
+            <label class="star star-3" for="stars-3"></label>
+            <input class="star star-2" id="stars-2" type="radio" name="stars" />
+            <label class="star star-2" for="stars-2"></label>
+            <input class="star star-1" id="stars-1" type="radio" name="stars" />
+            <label class="star star-1" for="stars-1"></label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom_textarea">
+    <ion-textarea placeholder="Type Your Feedback" class="inner_textarea"></ion-textarea>
+  </div>
+  <div padding class="pay_button">
+    <button (click)="submit()" class="pay_button_inner" ion-button block>{{ 'SUBMIT' | translate }}</button>
+  </div>
+</ion-content>

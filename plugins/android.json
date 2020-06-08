@@ -1,0 +1,71 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-googlemaps": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-fcm-with-dependecy-updated": {
+      "FCM_VERSION": "19.0.0",
+      "GRADLE_TOOLS_VERSION": "3.5.3",
+      "GOOGLE_SERVICES_VERSION": "4.3.3",
+      "SUPPORT_LIBRARY_VERSION": "28.0.0",
+      "ANDROID_DEFAULT_NOTIFICATION_ICON": "@mipmap/ic_launcher",
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.alpha.almahaopt"
+    }
+  }
+}
